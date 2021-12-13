@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: rgb(192, 240, 240);
+        }
+        input{
+            
+        }
+        #inp{
+            width: 250px;
+            height: 25px;
+            border-radius: 6px;
+            border: solid 1px;
+        }
+        label{
+            text-transform: uppercase;
+        }
+        #cor{
+            width: 50px;
+            height: 30px;
+        }
+        #aula{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(170, 255, 131, 0.74);
+            padding: 10px;
+            border-radius: 8px;
+        }
+        h2{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="aula">
+        <h2>Tipos de input</h2>
+        <label>datetime-local</label>
+        <p><input type="datetime-local" name="" id="inp"></p>
+        <label>date</label>
+        <p><input type="date" id="inp"></p>
+        <label>time</label>
+        <p><input type="time" id="inp"></p>
+        <label>email</label>
+        <p><input type="email" name="" id="inp" placeholder="email"></p>
+        <label>color</label>
+        <p><input type="color" name="" id="cor"></p>
+        <label>url</label>
+        <p><input type="url" placeholder="URL" id="inp"></p>
+        <p><input type="button" onclick="troca()" value="Click"></p>
+    </div>
+
+    <script>
+        function troca(){
+            var cor = document.getElementById("cor")
+            var c = cor.value
+            document.body.style.backgroundColor = c;
+        }
+    </script>
+</body>
+</html>
